@@ -1,0 +1,27 @@
+.nav {
+  grid-column: 1 / 13;
+  height: 150px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 210px;
+  height: 65px;
+  font-size: 20px;
+  font-weight: bold;
+  border: solid 1px;
+  border-radius: 15px;
+  border-color: #83858a;
+  background-color: white;
+}
+
+.onfocus:hover,
+.onfocus:hover i,
+.onfocus:hover div,
+.onfocus:hover div i {
+  transition: all 0.1s ease-out;
+  color: #93a9d1;
+}

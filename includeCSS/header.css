@@ -1,0 +1,32 @@
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  grid-column: 1 / 13;
+  height: 60px;
+}
+
+.header-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.header-item {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.onfocus:hover,
+.onfocus:hover i,
+.onfocus:hover div,
+.onfocus:hover div i {
+  transition: all 0.1s ease-out;
+  color: #93a9d1;
+}

@@ -1,0 +1,35 @@
+.recent-search-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+}
+.keyword-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 200px;
+  height: 80px;
+  border: solid 2px;
+  border-color: #83858a;
+  border-radius: 20px;
+  background-color: white;
+}
+.keyword {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.keyword-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.keyword-info {
+  font-size: 16px;
+}
+
+.keyword-icon {
+  font-size: 28px;
+}

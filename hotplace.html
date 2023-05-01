@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+    </style>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="https://kit.fontawesome.com/a3120b0f74.js" crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=944b293b8444b2699a0c646aa3498d4f&libraries=services"
+    ></script>
+    <title>Enjoy Trip</title>
+  </head>
+  <body>
+    <!-- FontAwesome은 Vue전용 코드가 따로 있으니 Vue에서 사용할땐 바꿔줄것-->
+    <main>
+      <div class="main-grid">
+        <!-- 헤더
+        헤더는 스크롤을 내리면 윗쪽에 고정되도록 코드 짜기 -->
+        <div class="header flex-box">
+          <div class="flex-box">
+            <div class="header-title">
+              LOGO
+              <img />
+            </div>
+            <div class="header-title">Enjoy Trip</div>
+          </div>
+          <div class="flex-box">
+            <div class="header-item onfocus">TRIPS</div>
+            <div class="header-item onfocus">REVIEW</div>
+            <div class="header-item onfocus">SIGN IN</div>
+            <div class="header-item onfocus"><i class="fa-solid fa-cart-shopping"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-cart-shopping" /> -->
+          </div>
+        </div>
+
+        <!-- 네비게이션 -->
+        <div class="nav flex-box">
+          <div class="nav-item onfocus">
+            <div>즐길거리</div>
+            <div><i class="fa-solid fa-umbrella-beach"></i></div>
+            <!-- Vue.js <font-awesome-icon icon="fa-solid fa-umbrella-beach" /> -->
+          </div>
+          <div class="nav-item onfocus">
+            <div>맛집</div>
+            <div><i class="fa-solid fa-utensils"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-utensils" /> -->
+          </div>
+          <div class="nav-item onfocus">
+            <div>비행기</div>
+            <div><i class="fa-solid fa-plane"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-plane" /> -->
+          </div>
+          <div class="nav-item onfocus">
+            <div>버스</div>
+            <div><i class="fa-solid fa-bus"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-bus" /> -->
+          </div>
+          <div class="nav-item onfocus">
+            <div>호텔</div>
+            <div><i class="fa-solid fa-bed"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-bed" /> -->
+          </div>
+        </div>
+        <!-- 카카오 지도와 검색창-->
+        <div class="kakao-map-container">
+          <!-- 카카오 지도-->
+          <div class="kakao-map" id="kakao-map"></div>
+          <!-- 핫플 등록 -->
+          <div class="add-hotplace">
+            <form class="add-hotplace-form">
+              <div class="add-hotplace-image-container">
+                <img src="{}" onerror="this.style.display='none'" />
+              </div>
+              <div class="add-hotplace-inputs">
+                <div class="add-hotplace-input-container">
+                  <div class="input-title">사진</div>
+                  <input onchange="PreviewImage();" type="file" id="imgSrc" />
+                </div>
+                <div class="add-hotplace-input-container">
+                  <div class="input-title">핫플 이름</div>
+                  <input type="text" id="placeName" />
+                </div>
+                <div class="add-hotplace-input-container">
+                  <div class="input-title">다녀온날짜</div>
+                  <input type="date" id="date" />
+                </div>
+                <div class="add-hotplace-input-container">
+                  <div class="input-title">장소유형</div>
+                  <select id="category">
+                    <option value="0" selected>관광지 유형</option>
+                    <option value="12">관광지</option>
+                    <option value="14">문화시설</option>
+                    <option value="15">축제공연행사</option>
+                    <option value="25">여행코스</option>
+                    <option value="28">레포츠</option>
+                    <option value="32">숙박</option>
+                    <option value="38">쇼핑</option>
+                    <option value="39">음식점</option>
+                  </select>
+                </div>
+                <div class="add-hotplace-input-container">
+                  <div class="input-title">핫플 상세설명</div>
+                  <input type="text" id="detail" />
+                </div>
+              </div>
+              <div class="add-hotplace-submit-button-container">
+                <button id="submit_hotplace" class="">등록</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="hotplace-list">내가 등록한 핫플레이스가 list 형태로 뜨도록 만들기</div>
+
+        <div class="footer">
+          <div>© 2023 LeeYerin & LeeHyoSik LLC All rights reserved.</div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="KakaoMap.js"></script>
+    <script type="text/javascript" src="Hotplace.js"></script>
+  </body>
+</html>
