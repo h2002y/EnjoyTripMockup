@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+    </style>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="https://kit.fontawesome.com/a3120b0f74.js" crossorigin="anonymous"></script>
+    <title>Enjoy Trip</title>
+  </head>
+  <body>
+    <!-- FontAwesome은 Vue전용 코드가 따로 있으니 Vue에서 사용할땐 바꿔줄것-->
+    <main>
+      <div class="main-grid">
+        <!-- 헤더
+        헤더는 스크롤을 내리면 윗쪽에 고정되도록 코드 짜기 -->
+        <div class="header flex-box">
+          <div class="flex-box">
+            <div class="header-title">
+              LOGO
+              <img />
+            </div>
+            <div class="header-title">Enjoy Trip</div>
+          </div>
+          <div class="flex-box">
+            <div class="header-item onfocus">TRIPS</div>
+            <div class="header-item onfocus">REVIEW</div>
+            <div class="header-item onfocus">SIGN IN</div>
+            <div class="header-item onfocus"><i class="fa-solid fa-cart-shopping"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-cart-shopping" /> -->
+          </div>
+        </div>
+
+        <div class="nav flex-box">
+          <div class="nav-item onfocus">
+            <div>즐길거리</div>
+            <div><i class="fa-solid fa-umbrella-beach"></i></div>
+            <!-- Vue.js <font-awesome-icon icon="fa-solid fa-umbrella-beach" /> -->
+          </div>
+          <div class="nav-item onfocus">
+            <div>맛집</div>
+            <div><i class="fa-solid fa-utensils"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-utensils" /> -->
+          </div>
+          <div class="nav-item onfocus">
+            <div>비행기</div>
+            <div><i class="fa-solid fa-plane"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-plane" /> -->
+          </div>
+          <div class="nav-item onfocus">
+            <div>버스</div>
+            <div><i class="fa-solid fa-bus"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-bus" /> -->
+          </div>
+          <div class="nav-item onfocus">
+            <div>호텔</div>
+            <div><i class="fa-solid fa-bed"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-bed" /> -->
+          </div>
+        </div>
+
+        <!-- Vue.js로 input이 엔터키로 작동하게 할 것-->
+        <div class="search">
+          <!-- TripAdvisor에서는 입력창을 클릭할 경우 
+                입력창만 강조할 수 있도록
+            다른 모든 요소들의 투명도를 낮춤-->
+          <div class="search-input-container">
+            <div class="search-input-item"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-magnifying-glass" /> -->
+            <div class="search-input-item search-box">
+              <input class="search-input" type="text" placeholder="무엇을 할까요?" />
+            </div>
+          </div>
+        </div>
+        <div class="recent-search">
+          <div class="recent-search-header">최근 검색</div>
+          <div class="keyword-container">
+            <div class="keyword-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <!-- <font-awesome-icon icon="fa-solid fa-location-dot" /> -->
+            <div class="keyword">
+              <div class="keyword-title">뉴욕</div>
+              <div class="keyword-info">미국</div>
+            </div>
+          </div>
+        </div>
+        <div class="recommend">
+          <div class="recommend-title">한식</div>
+          <div class="recommend-description">한국의 전통 음식 및 한상차림 경험하기</div>
+          <div class="recommend-list-container">
+            <div class="recommend-item">
+              <span>아리아</span>
+            </div>
+            <div class="recommend-item">
+              <span>아리아</span>
+            </div>
+            <div class="recommend-item">
+              <span>아리아</span>
+            </div>
+            <div class="recommend-item">
+              <span>아리아</span>
+            </div>
+            <div class="recommend-item">
+              <span>아리아</span>
+            </div>
+            <div class="recommend-item">
+              <span>아리아</span>
+            </div>
+            <div class="recommend-item">
+              <span>아리아</span>
+            </div>
+            <div class="recommend-item">
+              <span>아리아</span>
+            </div>
+            <div class="recommend-item">
+              <span>아리아</span>
+            </div>
+          </div>
+        </div>
+        <div class="recommend">추천2</div>
+        <div class="footer"></div>
+      </div>
+    </main>
+  </body>
+</html>

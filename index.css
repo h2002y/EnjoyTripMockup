@@ -1,0 +1,362 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  font-family: "Nanum Gothic", sans-serif;
+  color: #202122;
+  background-color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.main-grid {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(12, 78px);
+  column-gap: 24px;
+  row-gap: 24px;
+  background-color: beige;
+}
+
+.nav {
+  grid-column: 1 / 13;
+  height: 150px;
+}
+
+.search {
+  grid-column: 1 / 13;
+  height: 350px;
+}
+
+.recent-search {
+  grid-column: 1 / 13;
+  height: 150px;
+}
+
+.recommend {
+  grid-column: 1 / 13;
+  height: 460px;
+  background-color: white;
+}
+
+.footer {
+  grid-column: 1 / 13;
+  height: 150px;
+  background-color: #93a9d1;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  grid-column: 1 / 13;
+  height: 60px;
+}
+
+.header-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.header-item {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 210px;
+  height: 65px;
+  font-size: 20px;
+  font-weight: bold;
+  border: solid 1px;
+  border-radius: 15px;
+  border-color: #83858a;
+  background-color: white;
+}
+
+.search {
+  background-image: url("img/background.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 70%;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+}
+
+.search-input-item:nth-child(1) {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.search-box {
+  width: 80%;
+  height: 60px;
+}
+
+.search-input {
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 95%;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-input::placeholder {
+  font-size: 16px;
+}
+
+.recent-search-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+}
+.keyword-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 200px;
+  height: 80px;
+  border: solid 2px;
+  border-color: #83858a;
+  border-radius: 20px;
+  background-color: white;
+}
+.keyword {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.keyword-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.keyword-info {
+  font-size: 16px;
+}
+
+.keyword-icon {
+  font-size: 28px;
+}
+
+.recommend-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.recommend-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.recommend-list-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #83858a;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #93a9d1;
+}
+
+.recommend-item {
+  display: inline-block;
+  width: 270px;
+  height: 270px;
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(26, 18, 71, 0.1)),
+    url("img/aria.jpg");
+  background-size: cover;
+  text-align: end;
+  position: relative;
+  margin: 0px 10px;
+}
+
+.recommend-item span {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.onfocus:hover,
+.onfocus:hover i,
+.onfocus:hover div,
+.onfocus:hover div i {
+  transition: all 0.1s ease-out;
+  color: #93a9d1;
+}
