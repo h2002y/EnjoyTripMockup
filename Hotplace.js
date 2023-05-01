@@ -1,7 +1,8 @@
 const displayHotplaceList = () => {
   const hotplaceListContainer = document.querySelector(".hotplace-list");
-  const hotplaceList = sessionStorage.getItem("hotplaces");
+  const hotplaceList = JSON.parse(sessionStorage.getItem("hotplaces"));
   if (hotplaceList === null) return;
+  console.log(hotplaceList);
   hotplaceList.forEach((hotplace) => {
     let hotplaceContainer = document.createElement("div");
     let imgSrc = hotplace.imgSrc;
@@ -11,16 +12,18 @@ const displayHotplaceList = () => {
     let detail = hotplace.detail;
     let lat = hotplace.lat;
     let lng = hotplace.lng;
-    hotplaceContainer.appendChild(imgSrc);
-    hotplaceContainer.appendChild(placeName);
-    hotplaceContainer.appendChild(date);
-    hotplaceContainer.appendChild(category);
-    hotplaceContainer.appendChild(detail);
-    hotplaceContainer.appendChild(lat);
-    hotplaceContainer.appendChild(lng);
+    hotplaceContainer.appendChild(document.createTextNode(imgSrc));
+    hotplaceContainer.appendChild(document.createTextNode(placeName));
+    hotplaceContainer.appendChild(document.createTextNode(date));
+    hotplaceContainer.appendChild(document.createTextNode(category));
+    hotplaceContainer.appendChild(document.createTextNode(detail));
+    hotplaceContainer.appendChild(document.createTextNode(lat));
+    hotplaceContainer.appendChild(document.createTextNode(lng));
     hotplaceListContainer.appendChild(hotplaceContainer);
   });
 };
+
+displayHotplaceList();
 
 const submitHotplace = document.querySelector("#submit_hotplace");
 
@@ -68,11 +71,11 @@ submitHotplace.addEventListener("click", (e) => {
 
   console.log(hotplace);
 
-  let hotplaces = sessionStorage.getItem("hotplaces");
+  let hotplaces = JSON.parse(sessionStorage.getItem("hotplaces"));
   console.log(hotplaces);
   if (hotplaces == null) hotplaces = [];
   hotplaces.push(hotplace);
-  sessionStorage.setItem("hotplaces", hotplaces);
+  sessionStorage.setItem("hotplaces", JSON.stringify(hotplaces));
   displayHotplaceList();
 
   // 지도에 출력할 오버레이 박스 만들기

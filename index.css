@@ -431,3 +431,19 @@ body {
 .overlaybox {
   background-color: #93a9d1;
 }
+
+.hotplace-list{
+  grid-column: 1/13;
+}
+
+.buy-bus-container{
+  grid-column: 1/13;
+  height: 500px;
+  background-color: aqua;
+}
+
+.bus-list{
+  grid-column: 1/13;
+  height: 400px;
+  background-color: bisque;
+}
